@@ -1,5 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { RoutesEnum } from "./enums.ts";
+import { RoutesEnum } from "../types/enums.ts";
 
 import Home from "../pages/Home/index.tsx";
 import Details from "../pages/Details/index.tsx";

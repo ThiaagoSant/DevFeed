@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Post } from "../../types";
+import { Post } from "../../types/types";
 
 interface PostItemProps {
   post: Post;

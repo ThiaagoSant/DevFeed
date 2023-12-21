@@ -2,7 +2,7 @@ import React, { SetStateAction } from "react";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
-import { Post } from "../../types";
+import { Post } from "../../types/types";
 
 interface PaginationProps {
   pagination: number;

@@ -1,6 +1,6 @@
 import List from "@mui/material/List";
 import PostItem from "../PostItem";
-import { Post } from "../../types";
+import { Post } from "../../types/types";
 import { useNavigate } from "react-router-dom";
 
 interface PostListProps {
