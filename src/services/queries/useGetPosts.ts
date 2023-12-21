@@ -1,6 +1,15 @@
-import { useQuery } from "react-query";
+import { AxiosError } from "axios";
+import { useQuery, UseQueryOptions } from "react-query";
+import { Api, GetPostsResponse } from "../api/routes";
 
-import { Api } from "../api/routes";
+type GetPostsQueryKey = ["post", string | undefined];
+
+type GetAllPostsOptions = UseQueryOptions<
+  GetPostsResponse,
+  AxiosError,
+  GetPostsResponse,
+  GetPostsQueryKey
+>;
 
 const getPosts = async (postId: string | undefined) => {
   const { data } = await Api.getPosts(postId);
@@ -8,7 +17,9 @@ const getPosts = async (postId: string | undefined) => {
   return data;
 };
 
-const useGetPosts = (postId: string | undefined) =>
-  useQuery(["post", postId], () => getPosts(postId));
+const useGetPosts = (
+  postId: string | undefined,
+  options?: GetAllPostsOptions
+) => useQuery(["post", postId], () => getPosts(postId), options);
 
 export default useGetPosts;

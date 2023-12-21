@@ -1,8 +1,8 @@
 import { Post, Comment } from "../../types/types";
 import { api } from "./index";
 
-type GetPostsResponse = Post[] | Post;
-type GetCommentsResponse = Comment[];
+export type GetPostsResponse = Post[] | Post;
+export type GetCommentsResponse = Comment[];
 
 export const Api = {
   getPosts: (postId: string | undefined) =>
