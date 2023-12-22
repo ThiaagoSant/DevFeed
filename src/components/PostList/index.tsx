@@ -1,3 +1,4 @@
+import React from "react";
 import PostItem from "../PostItem";
 import { Post } from "../../types/types";
 import { useNavigate } from "react-router-dom";

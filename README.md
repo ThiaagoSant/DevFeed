@@ -1,6 +1,6 @@
 # DevFeed
 
-Este é o repositório com o código fonte desenvolvido para o teste de Desenvolvedor Front-End na TRIIBO, onde criei um blog de notícias utilizando React, React Query, React Router, Axios e Material UI.
+Este é o repositório com o código fonte desenvolvido para o teste de Desenvolvedor Front-End na TRIIBO, onde criei um blog de notícias utilizando React, React Query, React Router, Axios, Material UI, Jest e Testing Library.
 
 ## Instalação
 
@@ -22,4 +22,12 @@ Execute o comando a baixo para inicializar o servidor de desenvolvimento:
 
 ```sh
   $ npm run dev # ou yarn dev
+```
+
+## Executando os testes unitários
+
+Execute o comando a baixo para inicializar os testes unitários:
+
+```sh
+  $ npm run test # ou yarn test
 ```

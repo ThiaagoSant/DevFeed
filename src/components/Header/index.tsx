@@ -1,8 +1,5 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { Search, SearchIconWrapper, StyledInputBase } from "./style";
 
@@ -10,7 +7,7 @@ interface HeaderProps {
   handleSearch?: (searchTerm: string) => void;
 }
 
-export default function Header({ handleSearch }: HeaderProps) {
+const Header = ({ handleSearch }: HeaderProps) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -30,7 +27,7 @@ export default function Header({ handleSearch }: HeaderProps) {
           {handleSearch && (
             <Search>
               <SearchIconWrapper>
-                <SearchIcon sx={{ color: "white" }} />
+                <SearchIcon data-testid="search-icon" sx={{ color: "white" }} />
               </SearchIconWrapper>
               <StyledInputBase
                 onChange={(e) => handleSearch(e.target.value)}
@@ -43,4 +40,6 @@ export default function Header({ handleSearch }: HeaderProps) {
       </AppBar>
     </Box>
   );
-}
+};
+
+export default Header;
