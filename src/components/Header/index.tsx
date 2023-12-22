@@ -17,11 +17,11 @@ export default function Header({ handleSearch }: HeaderProps) {
         <Toolbar color="primary">
           <Typography
             variant="h4"
-            noWrap
             component="div"
             sx={{
               flexGrow: 1,
-              display: { xs: "none", sm: "block" },
+              marginRight: "5px",
+              display: { sm: "block" },
             }}
           >
             DevFeed
