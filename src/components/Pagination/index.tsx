@@ -21,8 +21,9 @@ const PaginationMUI = ({
     setPagination(page);
 
   return (
-    <Stack spacing={2} sx={{ marginBottom: "30px" }}>
+    <Stack spacing={0} sx={{ margin: "30px 0 10px 0", alignItems: "center" }}>
       <Pagination
+        color="primary"
         count={Math.ceil(filteredPosts?.length / ITEMS_PER_PAGE)}
         page={pagination}
         onChange={handlePageChange}

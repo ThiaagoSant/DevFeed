@@ -18,7 +18,7 @@ export const useHomeModel = (): HomeModel => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const { data: posts } = useGetPosts(undefined);
-  const ITEMS_PER_PAGE = 4;
+  const ITEMS_PER_PAGE = 9;
 
   const startIndex = (pagination - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;

@@ -14,7 +14,7 @@ export default function Header({ handleSearch }: HeaderProps) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar sx={{ background: "red" }}>
+        <Toolbar color="primary">
           <Typography
             variant="h4"
             noWrap
@@ -22,7 +22,6 @@ export default function Header({ handleSearch }: HeaderProps) {
             sx={{
               flexGrow: 1,
               display: { xs: "none", sm: "block" },
-              color: "white",
             }}
           >
             DevFeed

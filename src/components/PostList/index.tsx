@@ -1,4 +1,4 @@
-import List from "@mui/material/List";
+// import List from "@mui/material/List";
 import PostItem from "../PostItem";
 import { Post } from "../../types/types";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,26 @@ interface PostListProps {
   posts: Post[];
 }
 
-export default function PostList({ posts }: PostListProps) {
+// export default function PostList({ posts }: PostListProps) {
+//
+
+//   return (
+//     <List
+//       sx={{
+//         width: "100%",
+//         maxWidth: "100vw",
+//         bgcolor: "background.paper",
+//         margin: "20px 0 30px 0",
+//       }}
+//     >
+//       {renderPosts}
+//     </List>
+//   );
+// }
+
+import { Container } from "@mui/material";
+
+const PostList = ({ posts }: PostListProps) => {
   const navigate = useNavigate();
   const renderPosts = posts?.map((post) => {
     const { id } = post;
@@ -20,17 +39,11 @@ export default function PostList({ posts }: PostListProps) {
       />
     );
   });
-
   return (
-    <List
-      sx={{
-        width: "100%",
-        maxWidth: "100vw",
-        bgcolor: "background.paper",
-        margin: "20px 0 30px 0",
-      }}
-    >
+    <Container maxWidth="md" sx={{ marginTop: "40px" }}>
       {renderPosts}
-    </List>
+    </Container>
   );
-}
+};
+
+export default PostList;

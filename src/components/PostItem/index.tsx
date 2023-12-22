@@ -17,7 +17,7 @@ const PostItem = ({ post, onViewMore }: PostItemProps) => {
     body.length > MAX_CHARACTERS ? `${body.slice(0, MAX_CHARACTERS)}...` : body;
 
   return (
-    <Card sx={{ mb: 2 }}>
+    <Card sx={{ mb: 6 }}>
       <CardContent>
         <Typography variant="h6" gutterBottom>
           {title}
@@ -29,7 +29,7 @@ const PostItem = ({ post, onViewMore }: PostItemProps) => {
           sx={{ marginTop: "20px" }}
           variant="contained"
           color="primary"
-          onClick={() => onViewMore()}
+          onClick={onViewMore}
         >
           Ver Mais
         </Button>
